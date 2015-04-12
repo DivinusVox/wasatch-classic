@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head><title>Wasatch Classic</title></head>
+  <body>
+    <h1>Register for the Wasatch Classic</h1>
+    <form method="post" action="">
+      {% csrf_token %}
+      {{ form.as_p }}
+    <form>
+    <input type="submit">
+  </body>
+</html>
