@@ -24,6 +24,9 @@ class Registration(models.Model):
     state = models.CharField(max_length=25)
     zip = models.CharField(max_length=15)
 
+    class Meta:
+        unique_together = ("show", "email")
+
     def __unicode__(self):
         return u"{} {} <{}>".format(self.first_name,
                                                  self.last_name,
